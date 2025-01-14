@@ -1,9 +1,11 @@
 // components/Navbar.js
 import { useState } from "react";
 import styles from "./Navbar.module.css";
+import { useRouter } from 'next/router';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+	const router = useRouter();
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -32,7 +34,7 @@ const Navbar = () => {
                     <a onClick={() => handleScroll("#roadmap")}>Roadmap</a>
                     <a onClick={() => handleScroll("#contact")}>Contact</a>
                 </div>
-                <a onClick={() => handleScroll("#tokenomics")} className={styles.externalLink}>Tokenomics</a>
+                <a onClick={() => router.push('/IKOL_Lightpaper_v1.0.pdf')} className={styles.externalLink}>Lightpaper</a>
                 <div className={styles.menuToggle} onClick={toggleMenu}>
                     <div></div>
                     <div></div>
