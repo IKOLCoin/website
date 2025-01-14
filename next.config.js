@@ -1,10 +1,10 @@
 // next.config.js
-const isProd = false;
+const isProd = true;
 
 module.exports = {
 	output: 'export', // Enables static HTML export
   reactStrictMode: true,
-  assetPrefix: isProd ? '/your-repo-name/' : '', // Replace with your GitHub repository name
+  assetPrefix: isProd ? '/IKOLCoin.github.io/' : '', // Replace with your GitHub repository name
   images: {
     unoptimized: true, // Needed if using the Image component
   },
