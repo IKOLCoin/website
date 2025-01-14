@@ -219,6 +219,16 @@ const Index = () => {
     return progress;
   };
 
+  const handleScroll = (id) => {
+	const section = document.querySelector(id);
+	if (section) {
+		section.scrollIntoView({
+			behavior: "smooth",
+			block: "start",
+		});
+	}
+};
+
 
   return (
     <div>
@@ -243,7 +253,7 @@ const Index = () => {
             </h2>
             <div className="buttons">
               <button>Learn More About IKOL 🡥</button>
-              <button>Explore Tokenomics 🡥</button>
+              <button onClick={() => handleScroll("#tokenomics")}>Explore Tokenomics 🡥</button>
             </div>
           </div>
 
